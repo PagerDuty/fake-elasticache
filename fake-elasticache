@@ -9,9 +9,9 @@ module FakeElasticache
       ip = Resolv.getaddress('memcached')
 
       options = {
-        port:    11212,
+        port:    11211,
         bind:    '0.0.0.0',
-        servers: ["memcached|#{ip}|11211"],
+        servers: ["memcached|#{ip}|11212"],
         version: ENV.fetch('MEMCACHED_VERSION', '2.4.14')
       }
 
@@ -30,7 +30,7 @@ module FakeElasticache
           options[:servers] = v.split(',')
         end
       end.parse!
-      
+
       puts "starting with #{options}"
 
       options

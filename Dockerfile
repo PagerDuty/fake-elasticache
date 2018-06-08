@@ -9,5 +9,5 @@ RUN gem install eventmachine --no-rdoc --no-ri
 
 COPY fake-elasticache /usr/local/bin/
 
-EXPOSE 11212
+EXPOSE 11211
 CMD ["fake-elasticache"]
