@@ -30,6 +30,8 @@ module FakeElasticache
           options[:servers] = v.split(',')
         end
       end.parse!
+      
+      puts "starting with #{options}"
 
       options
     end
