@@ -29,8 +29,6 @@ module FakeElasticache
         end
       end.parse!
 
-      puts "starting with #{options}"
-
       options
     end
 
